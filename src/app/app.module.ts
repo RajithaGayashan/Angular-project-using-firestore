@@ -7,10 +7,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { from } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { AllAdminComponent } from './all-admin/all-admin.component';
+import { AdminComponent } from './all-admin/admin/admin.component';
+import { AdminListComponent } from './all-admin/admin-list/admin-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AllAdminComponent,
+    AdminComponent,
+    AdminListComponent
   ],
   imports: [
     BrowserModule,
