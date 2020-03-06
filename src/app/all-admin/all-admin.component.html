@@ -1,29 +1,12 @@
-<!-- <!-- <div class="row">
-    <div class="col-md-5">
-        <app-admin></app-admin>
-    </div>
-    <div class="col-md-7">
-        <app-admin-list></app-admin-list>
-    </div>
-    
-</div> -->
 <nav class="navbar navbar-dark bg-dark">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand" href="#">Xshop</a>
-  
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Register <span class="sr-only">(current)</span></a>
-            <app-admin></app-admin>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Admin List</a>
-            <app-admin-list></app-admin-list>
-        </li>
-      </ul>
+  <a class="navbar-brand mb-0 h1" href="#">Xshop</a>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Admin register</a>
+      <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Admin list</a>
     </div>
-  </nav> 
-  
+  </nav>
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"><app-admin></app-admin></div>
+    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"><app-admin-list></app-admin-list></div>
+    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+  </div>  
