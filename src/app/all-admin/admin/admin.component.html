@@ -1,12 +1,44 @@
 <h1 class="display-5">Admin Register</h1>
-<form #form="ngForm" autocomplete="off">
-    <div class="form-row">
-        <div class="form-group">
-            <input name="fullName" #fullName="ngModel" [(ngModel)]="service.formData.fullName" class="form-contral" placeholder="Full name">
-        </div>
-        <div class="form-group">
-            <input name="fullName" #lastName="ngModel" [(ngModel)]="service.formData.lastName" class="form-contral" placeholder=" name">
-        </div>
+<form>
+ <div class="form-row">
+   <div class="col">
+    <div class="form-group">
+        <label for="firstName">First name</label>
+        <input type="text" class="form-control" id="firstName" placeholder=" Enter your first name">
     </div>
-    
+   </div>
+   <div class="col"> 
+    <div class="form-group">
+      <label for="lastName">Last name</label>
+      <input type="text" class="form-control" id="lastName" placeholder="Enter your last name">
+    </div>
+   </div>
+ </div>
+ <div class="form-row">
+  <div class="col">
+ <div class="form-group">
+    <label for="position">Position</label>
+        <select class="custom-select custom-select-sm">
+            <option selected>select your position</option>
+            <option value="1">owner</option>
+            <option value="2">cashier</option>
+            <option value="3">senior employee</option>
+            <option value="3">junior employee</option>
+        </select>
+   </div> 
+ </div>
+ <div class="form-row">
+    <div class="col">
+        <div class="form-group">
+            <label for="admincode">Admin code</label>
+            <input type="text" class="form-control" id="admincode" placeholder="Enter your admincode">
+          </div>
+    </div> 
+ </div>
+ </div>
+ <div class="form-group">
+    <label for="mobile">Phone number</label>
+    <input type="text" class="form-control" id="mobile" placeholder="Enter your phone number">
+  </div>
+  
 </form>

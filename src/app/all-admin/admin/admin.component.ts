@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AdminService } from 'src/app/shared/admin.service';
+import { Adminservice } from 'src/app/shared/admin.service';
 
 @Component({
   selector: 'app-admin',
@@ -8,7 +8,7 @@ import { AdminService } from 'src/app/shared/admin.service';
 })
 export class AdminComponent implements OnInit {
 
-  constructor(private service : AdminService) { }
+  constructor(private service : Adminservice) { }
 
   ngOnInit() {
   }

@@ -10,8 +10,8 @@ import { environment } from 'src/environments/environment';
 import { AllAdminComponent } from './all-admin/all-admin.component';
 import { AdminComponent } from './all-admin/admin/admin.component';
 import { AdminListComponent } from './all-admin/admin-list/admin-list.component';
-import { AdminService } from './shared/admin.service';
-
+import { Adminservice } from './shared/admin.service';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +25,7 @@ import { AdminService } from './shared/admin.service';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule
   ],
-  providers: [AdminService],
+  providers:[Adminservice],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

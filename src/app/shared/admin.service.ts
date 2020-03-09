@@ -4,7 +4,7 @@ import { Admin } from './admin.model';
 @Injectable({
   providedIn: 'root'
 })
-export class AdminService {
+export class Adminservice {
   formData :Admin;
   constructor() { }
 }
