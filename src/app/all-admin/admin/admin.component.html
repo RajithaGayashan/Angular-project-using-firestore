@@ -40,5 +40,28 @@
     <label for="mobile">Phone number</label>
     <input type="text" class="form-control" id="mobile" placeholder="Enter your phone number">
   </div>
-  
+  <div class="form-group">
+    <label for="gender">Gender</label>
+    <div class="col">
+    <div class="custom-control custom-radio custom-control-inline">
+    <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+    <label class="custom-control-label" for="customRadioInline1">Female</label>
+     </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+        <label class="custom-control-label" for="customRadioInline2">Male</label>
+      </div>
+    </div>
+  </div>
+  <form action="/action_page.php">
+    <div class="form-group">
+      <label for="email">Email address:</label>
+      <input type="email" class="form-control" id="email"  placeholder="Enter your email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd"  placeholder="Enter your password">
+    </div>
+    <button type="button" class="btn btn-success">Register</button>
+  </form>
 </form>

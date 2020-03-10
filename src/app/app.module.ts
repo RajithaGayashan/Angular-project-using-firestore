@@ -12,6 +12,8 @@ import { AdminComponent } from './all-admin/admin/admin.component';
 import { AdminListComponent } from './all-admin/admin-list/admin-list.component';
 import { Adminservice } from './shared/admin.service';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,10 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    BrowserAnimationsModule,
+    MatSliderModule,
+    FormsModule
   ],
   providers:[Adminservice],
   bootstrap: [AppComponent]
