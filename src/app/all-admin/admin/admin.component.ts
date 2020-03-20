@@ -14,19 +14,19 @@ export class AdminComponent implements OnInit {
   ngOnInit() {
   }
 
-  // resetForm(form ?:NgForm){
-  //   if (form!=null)
-  //   form.resetForm();
-  //   this._service.formData={
-  //     firstName : '' ,
-  //     lastName : '' ,
-  //     position : '' ,
-  //     adminCode : null ,
-  //     mobile: '' ,
-  //     gender: '' ,
-  //     email: '' ,
-  //     password : ''
+  resetForm(form ?:NgForm){
+    if (form!=null)
+    form.resetForm();
+    this._service.formData={
+      firstName : '' ,
+      lastName : '' ,
+      position : '' ,
+      adminCode : null ,
+      mobile: '' ,
+      gender: '' ,
+      email: '' ,
+      password : ''
 
-  //  }
- // }
+   }
+ }
 }
