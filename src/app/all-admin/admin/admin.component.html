@@ -1,5 +1,5 @@
 <h1 class="display-5">Admin Register</h1>
-<form>
+<form >
     <div class="form-group">
         <label for="firstName">First name</label>
         <input type="text" class="form-control" id="firstName" placeholder=" Enter your first name" required >
@@ -58,7 +58,7 @@
       <label for="pwd">Password:</label>
       <input type="password" class="form-control" id="pwd"  placeholder="Enter your password">
     </div>
-    <button type="button" class="btn btn-success">Register</button>
+    <button type="register" [disabled]="form.invalid" class="btn btn-success">Register</button>
 </form>
 <script src="bootstrap-validation.js"></script>
 <script>
