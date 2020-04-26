@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 import { AllAdminComponent } from './all-admin/all-admin.component';
 import { AdminComponent } from './all-admin/admin/admin.component';
 import { AdminListComponent } from './all-admin/admin-list/admin-list.component';
-import { Adminservice } from './shared/admin.service';
+import { AdminService } from './shared/admin.service';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
@@ -30,7 +30,7 @@ import { MatSliderModule } from '@angular/material/slider';
     MatSliderModule,
     FormsModule
   ],
-  providers:[Adminservice],
+  providers:[AdminService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

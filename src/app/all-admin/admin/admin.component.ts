@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Adminservice } from 'src/app/shared/admin.service';
+import { AdminService } from 'src/app/shared/admin.service';
 import {FormControl, FormGroup, Validators, NgForm} from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/firestore';
 
@@ -9,24 +9,25 @@ import { AngularFirestore } from '@angular/fire/firestore';
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent implements OnInit {
-  constructor(private _service : Adminservice,private firestore:AngularFirestore) {}
+  constructor(private service : AdminService,private firestore:AngularFirestore) {}
 
   error: string;
   ngOnInit() {
+    this.resetForm();
   }
 
-  resetForm(form ?:NgForm){
+  resetForm(form?: NgForm){
     if (form!=null)
     form.resetForm();
-    this._service.formData={
+    this.service.formData={
       firstName : '' ,
-      lastName : '' ,
-      position : '' ,
-      adminCode : null ,
-      mobile: '' ,
-      gender: '' ,
-      email: '' ,
-      password : ''
+      lastName : '' 
+      // position : '' ,
+      // adminCode : null ,
+      // mobile: '' ,
+      // gender: '' ,
+      // email: '' ,
+      // password : ''
 
    }
  }

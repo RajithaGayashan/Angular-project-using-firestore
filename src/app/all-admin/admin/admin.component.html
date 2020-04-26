@@ -1,11 +1,21 @@
 <h1 class="display-5">Admin Register</h1>
-<form >
+<form #form="ngForm" autocomplete="off">
+  <div class="form-group">
+    <input name="firstName" #firstName="ngModel" [(ngModel)]="service.formData.firstName" class="form-control" placeholder="First Name">
+  </div>
+  <div class="form-group">
+    <input name="lastName" #lastName="ngModel" [(ngModel)]="service.formData.lastName" class="form-control" placeholder="Last Name">
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-lg btn-black btn-info">Register</button>
+  </div>  
+</form>  
+    <!-- <form (rerister)="onRegister(form)">
     <div class="form-group">
         <label for="firstName">First name</label>
         <input type="text" class="form-control" id="firstName" placeholder=" Enter your first name" required >
         <div   class="validation-error" > This field is required</div>
-        <!-- *ngIf="firstName.invalid && firstName.touched" -->
-      </div> 
+       </div> 
     <div class="form-group">
       <label for="lastName">Last name</label>
       <input type="text" class="form-control" id="lastName" placeholder="Enter your last name">
@@ -59,9 +69,9 @@
       <input type="password" class="form-control" id="pwd"  placeholder="Enter your password">
     </div>
     <button type="register" [disabled]="form.invalid" class="btn btn-success">Register</button>
-</form>
-<script src="bootstrap-validation.js"></script>
+</form> -->
+<!-- <script src="bootstrap-validation.js"></script>
 <script>
   bootstrapValidate('firstName','min:5:Enter at least 5 characters!')
-</script>
+</script> --> 
 
