@@ -34,6 +34,7 @@ export class AdminComponent implements OnInit {
 
  onRegister(form:NgForm){
    let data=form.value;
+   console.log(form.value);
    this.firestore.collection('all-admin').add(data);
    this.resetForm(form);
  }
