@@ -24,6 +24,7 @@ export class AdminComponent implements OnInit {
     if (form!=null)
     form.resetForm();
     this.service.formData={
+      id : null ,
       firstName : '' ,
       lastName : '' 
       // position : '' ,
