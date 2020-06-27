@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AdminService } from 'src/app/shared/admin.service';
 import {FormControl, FormGroup, Validators, NgForm} from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-admin',
@@ -9,7 +10,10 @@ import { AngularFirestore } from '@angular/fire/firestore';
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent implements OnInit {
-  constructor(private service : AdminService,private firestore:AngularFirestore) {}
+  constructor(private service : AdminService,
+  private firestore:AngularFirestore,
+  private toastr : ToastrService
+  ) { }
 
   error: string;
   ngOnInit() {
@@ -37,5 +41,6 @@ export class AdminComponent implements OnInit {
    console.log(form.value);
    this.firestore.collection('all-admin').add(data);
    this.resetForm(form);
+   this.toastr.success('Registered successfully','Admin.Register');
  }
 }

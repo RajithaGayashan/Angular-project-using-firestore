@@ -14,6 +14,8 @@ import { AdminService } from './shared/admin.service';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
+ 
+import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +30,8 @@ import { MatSliderModule } from '@angular/material/slider';
     AngularFirestoreModule,
     BrowserAnimationsModule,
     MatSliderModule,
-    FormsModule
+    FormsModule,
+    ToastrModule.forRoot()
   ],
   providers:[AdminService],
   bootstrap: [AppComponent]
