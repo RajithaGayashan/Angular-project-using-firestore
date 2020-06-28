@@ -6,8 +6,8 @@
     </thead>
     <tbody>
         <tr *ngFor="let emp of list">
-            <td>{{admin.firstName}}</td>
-            <td>{{admin.lastName}}</td>
+            <td (click)="onEdit(emp)" >{{emp.firstName}}</td>
+            <td>{{emp.lastName}}</td>
                 <td><a  class="btn text-danger"><i class="fa fa-trash"></i></a></td>
         </tr>
     </tbody>
