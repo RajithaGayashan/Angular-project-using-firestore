@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminService } from 'src/app/shared/admin.service';
+import { Admin } from 'src/app/shared/admin.model';
 // import { Admin } from 'src/app/shared/admin.model';
 //import { Console } from 'console';
 
@@ -15,14 +16,14 @@ export class AdminListComponent implements OnInit {
   ngOnInit() {
     this.service.getAdmins().subscribe(actionArray =>{
         this.list=actionArray;
-//  (item => {
+
   console.log(this.list)
-  // return {
-  //   id:item.payload.doc.id,
-  //   ...item.payload.doc.data()
-  // } as Admin;
-// })
     });
   }
+
+  onEdit(emp:Admin){
+    this.service.formData =Object.assign({},emp);
+  }
 }
+
  
