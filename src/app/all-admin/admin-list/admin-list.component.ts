@@ -3,6 +3,8 @@ import { AdminService } from 'src/app/shared/admin.service';
 import { Admin } from 'src/app/shared/admin.model';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { Toast, ToastrService } from 'ngx-toastr';
+// import { Console } from 'console';
 // import { Admin } from 'src/app/shared/admin.model';
 //import { Console } from 'console';
 
@@ -14,7 +16,10 @@ import { AngularFirestore } from '@angular/fire/firestore';
 export class AdminListComponent implements OnInit {
   list:any;
   constructor(private service:AdminService,
-    private firestore :AngularFirestore) { }
+    private firestore :AngularFirestore,
+    private toastr:ToastrService
+    )
+     { }
 
   ngOnInit() {
     this.service.getAdmins().subscribe(actionArray =>{
@@ -27,10 +32,14 @@ export class AdminListComponent implements OnInit {
   onEdit(emp:Admin){
     this.service.formData =Object.assign({},emp);
   }
-
+ 
   onDelete(id:string){
-    if(confirm("Are you sure to delete this record ?")) {
-      this.firestore.doc('admins/'+id).delete();
+    console.log(id);
+    if(confirm("Are you sure to delete this record ?")) {  
+      this.firestore.doc('all-admin/'+id).delete();
+      this.toastr.warning('Deleted successfully','Admin.Register');
+ 
+    
 
     } 
   }

@@ -1,6 +1,6 @@
 <h1 class="display-5">Admin Register</h1>
 <form #form="ngForm"  (ngSubmit)="onRegister(form)">
-  <input type="hidden" id="firstName" #id="ngModel" [(ngModel)]="service.formData.id" >
+  <input type="hidden" name="id" #id="ngModel" [(ngModel)]="service.formData.id" >
   <div class="form-group">
     <input name="firstName" #firstName="ngModel" [(ngModel)]="service.formData.firstName" class="form-control" placeholder="First Name" required>
     <div *ngIf="firstName.invalid && firstName.touched" class="validation-error">This field is required.</div>

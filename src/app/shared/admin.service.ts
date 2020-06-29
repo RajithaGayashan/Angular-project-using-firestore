@@ -10,6 +10,10 @@ export class AdminService {
   formData :Admin;
   constructor(private firestore:AngularFirestore) { }
 
+getId(){
+  return this.firestore.createId();
+}
+
   getAdmins():Observable<Admin[]>{
     return this.firestore.collection<Admin>('all-admin')
     .valueChanges();

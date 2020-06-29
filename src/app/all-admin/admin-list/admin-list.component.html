@@ -8,7 +8,7 @@
         <tr *ngFor="let emp of list">
             <td (click)="onEdit(emp)" >{{emp.firstName}}</td>
             <td (click)="onEdit(emp)" >{{emp.lastName}}</td>
-                <td><a  class="btn text-danger"><i class="fa fa-trash"></i></a></td>
+                <td><a  class="btn text-danger"(click)="onDelete(emp.id)"><i class="fa fa-trash"></i></a></td>
         </tr>
     </tbody>
 </table>
