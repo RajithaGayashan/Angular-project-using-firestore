@@ -27,12 +27,7 @@ export class AdminComponent implements OnInit {
       id : null ,
       firstName : '' ,
       lastName : '' 
-      // position : '' ,
-      // adminCode : null ,
-      // mobile: '' ,
-      // gender: '' ,
-      // email: '' ,
-      // password : ''
+
 
    }
  }
@@ -46,10 +41,9 @@ export class AdminComponent implements OnInit {
      lastName : form.value.lastName
    }
    console.log(data);
-  //  let data=Object.assign({},form.value);
-//    delete data.id;
+
    if(form.value.id==null)
-  //  console.log(form.value);
+
     this.firestore.collection('all-admin').doc(adminId).set(data);
    else 
   this.firestore.doc('admin/'+form.value.id).update(data);
